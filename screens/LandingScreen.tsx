@@ -384,18 +384,18 @@ export function LandingScreen({ onStartLeadGen }: LandingScreenProps) {
           <div className="container mx-auto relative z-10">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Content */}
-              <div className="space-y-6 sm:space-y-8 text-left">
+              <div className="space-y-6 sm:space-y-7 lg:space-y-8 text-left">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight heading-font">
-                    Увеличьте продажи{' '}
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight heading-font">
+                    Идентифицируйте горячих клиентов
+                    <br className="hidden md:block" />
                     <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
-                      до 200%
-                    </span>{' '}
-                    с нашим сервисом идентификаций
+                      и растите x2–x3
+                    </span>
                   </h1>
                 </motion.div>
 
@@ -403,10 +403,10 @@ export function LandingScreen({ onStartLeadGen }: LandingScreenProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="bg-gray-800/50 backdrop-blur-sm border border-white/10 rounded-3xl p-4 sm:p-6"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-4 sm:p-5 lg:p-6"
                 >
-                  <p className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
-                    Забудьте о расходах на рекламу — платите только за контакты тех, кто уже заинтересован в вашем продукте!
+                  <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed">
+                    Jarvis Leads находит и идентифицирует людей, которые уже интересуются вашими услугами. Вы получаете контакты — мы берём на себя идентификацию и первичную валидацию.
                   </p>
                 </motion.div>
 
@@ -414,38 +414,41 @@ export function LandingScreen({ onStartLeadGen }: LandingScreenProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="flex justify-start"
+                  className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4"
                 >
-                  <motion.div
-                    whileHover={{ 
-                      scale: 1.05, 
-                      rotate: [0, -1, 1, 0]
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                  <Button
+                    onClick={handleGetStarted}
+                    size="lg"
+                    className="px-6 sm:px-8 md:px-12 py-3 sm:py-4 rounded-2xl font-semibold transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-lg hover:shadow-orange-500/40 text-base sm:text-lg lg:text-xl font-bold group"
                   >
-                    <Button
-                      onClick={handleGetStarted}
-                      size="lg"
-                      className="px-6 sm:px-8 md:px-16 py-3 sm:py-4 lg:py-6 rounded-2xl font-semibold transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-lg hover:shadow-orange-500/40 w-full max-w-sm sm:max-w-md text-base sm:text-lg lg:text-xl font-bold group justify-center"
-                    >
-                      <motion.span
-                        animate={{ x: [0, 3, 0] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="text-center"
-                      >
-                        Получить контакты
-                      </motion.span>
-                      <motion.div
-                        className="ml-2 sm:ml-3"
-                        animate={{ x: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      >
-                        <ArrowRight size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-                      </motion.div>
-                    </Button>
-                  </motion.div>
+                    <span className="text-center">Начать бесплатно</span>
+                    <motion.div className="ml-2" animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                      <ArrowRight size={18} className="sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+                    </motion.div>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="px-6 sm:px-8 md:px-12 py-3 sm:py-4 rounded-2xl border-white/20 text-white hover:bg-white/10"
+                    onClick={() => document.getElementById('methods')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    Посмотреть как это работает
+                  </Button>
                 </motion.div>
+
+                {/* Trust badges */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-2">
+                  {[
+                    '94% точность данных',
+                    '50 лидов бесплатно',
+                    'Оплата за результат',
+                    '15 минут внедрение'
+                  ].map((text, i) => (
+                    <div key={i} className="text-center text-xs sm:text-sm text-gray-300 bg-white/5 border border-white/10 rounded-xl py-2">
+                      {text}
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Hero Image with iPhone */}
