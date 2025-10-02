@@ -1,0 +1,168 @@
+<!doctype html>
+<!-- JARVIS LEADS - FRONTEND-ONLY PROJECT -->
+<!-- NO SUPABASE | NO BACKEND | TELEGRAM INTEGRATION ONLY -->
+<html lang="ru" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Jarvis Leads - Увеличьте продажи до 200% | Сервис идентификации лидов</title>
+    <meta name="title" content="Jarvis Leads - Увеличьте продажи до 200% | Сервис идентификации лидов" />
+    <meta name="description" content="Забудьте о расходах на рекламу — платите только за контакты тех, кто уже заинтересован в вашем продукте! Получите 50 лидов + звонки бесплатно. Снижение стоимости привлечения клиента в 2-5 раз." />
+    <meta name="keywords" content="лидогенерация, идентификация контактов, привлечение клиентов, снижение стоимости лидов, горячие лиды, строительство, недвижимость, ремонт, финансы" />
+    <meta name="author" content="Jarvis Leads" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jarvis-leads.vercel.app/" />
+    <meta property="og:title" content="Jarvis Leads - Увеличьте продажи до 200% | Сервис идентификации лидов" />
+    <meta property="og:description" content="Забудьте о расходах на рекламу — платите только за контакты тех, кто уже заинтересован в вашем продукте! Получите 50 лидов + звонки бесплатно. Снижение стоимости привлечения клиента в 2-5 раз." />
+    <meta property="og:image" content="https://jarvis-leads.vercel.app/og-image.png" />
+    <meta property="og:site_name" content="Jarvis Leads" />
+    <meta property="og:locale" content="ru_RU" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jarvis-leads.vercel.app/" />
+    <meta property="twitter:title" content="Jarvis Leads - Увеличьте продажи до 200% | Сервис идентификации лидов" />
+    <meta property="twitter:description" content="Забудьте о расходах на рекламу — платите только за контакты тех, кто уже заинтересован в вашем продукте! Получите 50 лидов + звонки бесплатно. Снижение стоимости привлечения клиента в 2-5 раз." />
+    <meta property="twitter:image" content="https://jarvis-leads.vercel.app/og-image.png" />
+    
+    <!-- PWA Settings -->
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Jarvis Leads" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Jarvis Leads", 
+      "serviceType": "Лидогенерация и идентификация контактов",
+      "description": "Сервис идентификации контактов для увеличения продаж до 200%. Получайте контакты заинтересованных клиентов без затрат на рекламу. Снижение стоимости привлечения клиента в 2-5 раз.",
+      "url": "https://jarvis-leads.vercel.app",
+      "provider": {
+        "@type": "Organization",
+        "name": "Jarvis Leads",
+        "url": "https://jarvis-leads.vercel.app",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+7-901-438-93-95",
+          "contactType": "Customer Service",
+          "email": "Jarvis.ai.ecosystem@gmail.com"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "name": "Первые 50 лидов бесплатно",
+        "description": "50 лидов + звонки по всем от наших специалистов бесплатно",
+        "price": "0",
+        "priceCurrency": "RUB"
+      },
+      "areaServed": "RU",
+      "audience": {
+        "@type": "BusinessAudience",
+        "businessFunction": "Продажи и маркетинг"
+      }
+    }
+    </script>
+
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//api.telegram.org" />
+    
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    
+    <style>
+      /* Критические стили для предотвращения FOUC */
+      html {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+      
+      body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Loading screen */
+      #loading-screen {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-logo {
+        width: 80px;
+        height: 80px;
+        border: 3px solid rgba(249, 115, 22, 0.3);
+        border-top: 3px solid #f97316;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* Скрыть загрузочный экран после загрузки */
+      .loaded #loading-screen {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+      <div class="loading-logo"></div>
+    </div>
+    
+    <!-- React App Root -->
+    <div id="root"></div>
+    
+    <!-- Main App Script -->
+    <script type="module" src="/main.tsx"></script>
+    
+    <!-- Loading completion script -->
+    <script>
+      window.addEventListener('load', function() {
+        document.documentElement.classList.add('loaded');
+        setTimeout(() => {
+          const loadingScreen = document.getElementById('loading-screen');
+          if (loadingScreen) {
+            loadingScreen.remove();
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

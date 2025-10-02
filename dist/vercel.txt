@@ -1,0 +1,4 @@
+Jarvis Leads - Frontend Only Project
+Build Output: dist/
+Framework: Vite + React
+No Backend Dependencies

@@ -1,0 +1,36 @@
+{
+  "name": "jarvis-leads",
+  "version": "1.0.0",
+  "description": "Frontend-only AI-powered lead generation platform with Telegram integration",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": ["frontend", "react", "vite", "telegram", "leads", "no-backend"],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.18.0",
+    "lucide-react": "^0.263.1",
+    "sonner": "^2.0.3",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "tailwind-merge": "^2.0.0",
+    "@radix-ui/react-slot": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.10.2",
+    "typescript": "^5.0.2",
+    "vite": "^6.3.5",
+    "@tailwindcss/vite": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
