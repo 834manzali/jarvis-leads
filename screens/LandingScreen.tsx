@@ -278,7 +278,7 @@ export function LandingScreen({ onStartLeadGen }: LandingScreenProps) {
       <div className="relative z-10">
         {/* Navigation */}
         <motion.nav 
-          className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10"
+          className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-black/40 border-b border-white/10"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -310,7 +310,7 @@ export function LandingScreen({ onStartLeadGen }: LandingScreenProps) {
               <div className="hidden md:flex items-center space-x-3">
                 <Button
                   onClick={handleGetStarted}
-                  className="px-7 py-2.5 rounded-2xl font-semibold transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-lg hover:shadow-orange-500/40 text-base lg:text-lg font-bold"
+                  className="px-6 py-2.5 rounded-2xl font-semibold transition-all duration-300 bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/30 hover:shadow-lg hover:shadow-orange-500/40 text-base lg:text-lg font-bold"
                 >
                   Начать
                 </Button>
@@ -335,7 +335,7 @@ export function LandingScreen({ onStartLeadGen }: LandingScreenProps) {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="md:hidden bg-black/80 backdrop-blur-md border-t border-white/10"
+                className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/10"
               >
                 <div className="px-4 py-5 space-y-4">
                   <a href="#how" className="block text-gray-300 hover:text-white transition-colors text-base py-2">Как это работает</a>
